@@ -46,7 +46,8 @@ def simplest_cb(img, percent):
     return cv2.merge(out_channels)
 
 if __name__ == '__main__':
-    img = cv2.imread('./images/underwater3.jpg')
+    img = cv2.imread('./images/underwater1.jpg')
+    img = cv2.resize(img, (600,600), 2,2,cv2.INTER_AREA)
     out = simplest_cb(img, 1)
     cv2.imshow("before", img)
     cv2.imshow("after", out)
